@@ -43,5 +43,8 @@ public class Main {
 
         //System.out.println(seller);
 
+        System.out.println("\n=== TEST 5: Delete seller ===");
+        sellerDao.deleteById(9);
+
     }
 }
