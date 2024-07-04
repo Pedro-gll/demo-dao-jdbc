@@ -12,9 +12,9 @@ public class Main {
     public static void main(String[] args) {
 
         SellerDao sellerDao = daoFactory.createSellerDao();
-    /*
+
         Department dp = new Department(2,null);
-        sellerDao.insert(new Seller(9,"Name Test","test@gmail", new Date(), 2000.0, dp));
+        //sellerDao.insert(new Seller(9,"Name Test","test@gmail", new Date(), 2000.0, dp));
 
         System.out.println("=== TEST 1: seler find by ID ===");
         Seller seller = sellerDao.findById(9);
@@ -30,10 +30,16 @@ public class Main {
         List<Seller> sellers = sellerDao.findAll();
         for (Seller s : sellers) {
             System.out.println(s);
-        }*/
-        Department department = new Department(2, null);
+        }
+        /*Department department = new Department(2, null);
         sellerDao.insert(new Seller(0, "Test2", "test2@gmail.com", new java.util.Date(), 2999.0, department));
+        */
 
+        System.out.println("\n=== TEST 4: Update seller ===");
+        seller = sellerDao.findById(8);
+        seller.setEmail("Pedrin1@gmail.com");
+        sellerDao.update(seller);
+        System.out.println("Updated completed");
 
         //System.out.println(seller);
 
